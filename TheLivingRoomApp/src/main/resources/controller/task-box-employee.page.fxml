@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBoxTheWholeBox" alignment="CENTER" prefHeight="75.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TaskEmployeeController">
+   <children>
+      <HBox fx:id="hbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="75.0" prefWidth="1000.0" spacing="15.0">
+         <children>
+            <ImageView fx:id="overdueTask" fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@images/ex-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="urgencyCircle" fill="#f0807a" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0" />
+            <StackPane prefHeight="75.0" prefWidth="494.0">
+               <children>
+                  <ProgressBar fx:id="progressBar" prefHeight="25.0" prefWidth="500.0" progress="0.0">
+                     <tooltip>
+                        <Tooltip text="Progress of given task" />
+                     </tooltip></ProgressBar>
+                  <Label fx:id="taskLabel" text="The given task">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children>
+            </StackPane>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#setTaskToInactive" prefHeight="25.0" prefWidth="25.0" text="✓">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Mark task as completed" />
+               </tooltip>
+            </Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addCommentToTask" prefHeight="25.0" prefWidth="25.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../launcher/images/comment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Write a comment" />
+               </tooltip>
+            </Button>
+            <Button fx:id="information" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#showDescription" prefHeight="25.0" prefWidth="25.0" text="i">
+               <tooltip>
+                  <Tooltip text="See information about given task" />
+               </tooltip></Button>
+            <ComboBox fx:id="dropdownMenuPercent" onAction="#updateProgressBar" prefHeight="27.0" prefWidth="122.0" promptText="Progress %">
+               <tooltip>
+                  <Tooltip text="Set progress" />
+               </tooltip></ComboBox>
+            <HBox fx:id="expandHBox" alignment="CENTER" maxHeight="-Infinity" prefHeight="75.0" prefWidth="125.0" spacing="10.0">
+               <children>
+                  <Label fx:id="assigneeLabel" text="Assignees">
+                     <tooltip>
+                        <Tooltip text="See assignees" />
+                     </tooltip></Label>
+                  <Button fx:id="expandAssigneeButton" mnemonicParsing="false" onAction="#expandToViewAssignees" prefHeight="27.0">
+                     <graphic>
+                        <ImageView fx:id="imageView" fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/down-chevron.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="hBox" alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="200.0" />
+   </children>
+</VBox>

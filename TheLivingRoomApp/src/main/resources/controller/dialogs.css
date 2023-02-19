@@ -1,0 +1,14 @@
+.error-dialog {
+    -fx-background-color: yellow;
+    -fx-background-radius: 10px;
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+}
+
+.button{
+    -fx-background-color: #90e0ef;
+}
+
+.button:hover {
+    -fx-background-color: #00b4d8;
+}

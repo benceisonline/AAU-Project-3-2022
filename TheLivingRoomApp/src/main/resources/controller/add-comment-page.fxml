@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="addCommentBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="738.0" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <Label alignment="CENTER" text="Add comment" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="24.0" />
+            </font>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+        </Label>
+    </top>
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="328.0">
+                     <content>
+                        <GridPane fx:id="addCommentGridPane" prefHeight="1.0" prefWidth="156.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+                      <HBox alignment="CENTER_RIGHT">
+                          <children>
+                        <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelAndReturnToOverviewPage" prefHeight="30.0" prefWidth="75.0" text="Cancel" textAlignment="CENTER" />
+                          </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                      </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                    <TextArea fx:id="addComment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="310.0" promptText="Write comment here..." wrapText="true" />
+                      <HBox alignment="CENTER_LEFT">
+                          <children>
+                              <Button fx:id="addCommentButton" mnemonicParsing="false" onAction="#addCommentAndReturnToOverviewPage" prefHeight="30.0" prefWidth="75.0" text="Submit" textAlignment="CENTER" />
+                          </children>
+                      </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

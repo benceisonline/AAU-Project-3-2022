@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPaneInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLabel" alignment="TOP_CENTER" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" text="  information">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="250.0" prefWidth="225.0" spacing="10.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="Description: ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane prefHeight="200.0" prefWidth="250.0">
+                                 <content>
+                                    <Label fx:id="descriptionLabel" alignment="TOP_LEFT" maxWidth="183.0" prefWidth="183.0" text="Label">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </content>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ScrollPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Date: ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="dateLabel" alignment="TOP_CENTER" text="label" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Repeats: ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="frequencyLabel" alignment="TOP_CENTER" text="label" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Importance: ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="urgencyLabel" alignment="TOP_CENTER" text="label" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Role: ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="typeLabel" alignment="TOP_CENTER" text="label" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Assigned to ">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="assigneeLabel" alignment="TOP_CENTER" text="label" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="250.0" prefWidth="225.0" spacing="10.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="264.0" text="Comments:" />
+                        <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="225.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <GridPane fx:id="commentGridPane" prefWidth="1.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </ScrollPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="100.0" right="100.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="698.0">
+               <children>
+                  <Label alignment="TOP_CENTER" text="Last edited: ">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lastEditLabel" alignment="TOP_CENTER" text="label" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="698.0">
+               <children>
+                  <Button fx:id="okButton" alignment="CENTER" mnemonicParsing="false" onAction="#makeOkButtonLogic" prefHeight="30.0" prefWidth="75.0" text="Close" textAlignment="CENTER" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
